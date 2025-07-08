@@ -15,7 +15,13 @@ public class KafkaConsumerService {
 
     @KafkaListener(topics = "my-topic", groupId = "my-group")
     public void listen(String message) {
-        log.info("Received: {}", message);
+        log.info("Received: {} from group 1", message);
     }
+
+    @KafkaListener(topics = "my-topic", groupId = "my-group-2")
+    public void listen2(String message) {
+        log.info("Received: {} from group 2", message);
+    }
+
 
 }

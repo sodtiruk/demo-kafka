@@ -20,8 +20,8 @@ spring:
 
   kafka:
     bootstrap-servers: localhost:29092
-    consumer:
-      group-id: my-group
+#    consumer:
+#      group-id: my-group
 
 server:
   servlet:

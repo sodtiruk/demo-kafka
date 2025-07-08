@@ -18,10 +18,8 @@ public class SendMessageController {
 
     @PostMapping("/send")
     public String sendMessage(@RequestParam String message) {
-        for (int i = 0; i < 100; i++) {
-            kafkaProducer.sendMessage("my-topic", message);
-        }
-        return "Message sent: " + message + "100 times";
+        kafkaProducer.sendMessage("my-topic", message);
+        return "Message sent: " + message + "1 time";
     }
 
 }
